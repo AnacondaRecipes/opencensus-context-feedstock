@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/census-instrumentation/opencensus-python/archive/v{{ opencensus_version }}.tar.gz
-  sha256: 3e2ed9735e49ea324d402af576d8504fab6a7f664c8c6f20820e1abf242c138
+  sha256: 3e2ed9735e49ea324d402af576d8504fab6a7f664c8c6f20820e1abf242c1384
 
 build:
   number: 0
-  script: "cd context/opencensus-context && {PYTHON} -m pip install . -vv --no-deps --no-build-isolation"
+  script: "cd context/opencensus-context && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation"
 
 requirements:
   host:
