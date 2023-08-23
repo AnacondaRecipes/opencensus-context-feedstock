@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/census-instrumentation/opencensus-python/archive/v{{ opencensus_version }}.zip
+  url: https://github.com/census-instrumentation/opencensus-python/archive/v{{ opencensus_version }}.tar.gz
   sha256: 3e2ed9735e49ea324d402af576d8504fab6a7f664c8c6f20820e1abf242c138
 
 build:
@@ -16,6 +16,7 @@ build:
 requirements:
   host:
     - python
+    - wheel
     - pip
   run:
     - python
@@ -32,6 +33,7 @@ test:
 about:
   home: https://github.com/census-instrumentation/opencensus-python
   license: Apache-2.0
+  license_family: Apache
   license_file: LICENSE
   summary: The OpenCensus Runtime Context.
   description: |
